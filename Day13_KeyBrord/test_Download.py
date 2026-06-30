@@ -33,6 +33,6 @@ def test_download_file(page: Page):
     page.wait_for_timeout(3000)
 
     if os.path.exists("downloads/testfile.txt"):
-        print("file exits")
+        print("file exits,")
     else:
         print("File is not exists")

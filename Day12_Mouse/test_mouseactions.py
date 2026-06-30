@@ -8,13 +8,12 @@ def test_mouse_hover(page: Page):
     page.goto("https://testautomationpractice.blogspot.com/")
     page.wait_for_timeout(500)
 
-    # 🚨 FIX 1: 'pointtime' variable ko properly name kiya aur locator theek kiya
+ 
     pointme_btn = page.locator(".dropbtn")
 
     # Dropdown button ke upar mouse lekar gaye (Hover kiya)
     pointme_btn.hover()
 
-    # 🚨 FIX 2: Aapka 'nth-child(2)' ka concept ekdum sahi tha, laptops select karne ke liye
     laptops = page.locator(".dropdown-content a:nth-child(2)")
     laptops.hover() # Laptops option ke upar hover kiya
     
